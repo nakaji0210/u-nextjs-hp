@@ -1,7 +1,20 @@
-import { Layout } from '../components/layout'
+import { Layout } from '../components/Layout'
+import { Post } from '../components/Post'
+import { getAllPostsData } from '../lib/posts';
 
-const Blog = () => {
-  return <Layout title="blog">Blog page</Layout>;
+export default function Blog ({ posts }) {
+  return (
+    <Layout title="blog">
+      <ul className='m-10'>
+      {posts && posts.map((post)=><Post key={post.id} post={post} />)}
+      </ul>
+    </Layout>
+    );
 };
 
-export default Blog;
+export async function getStaticProps() {
+  const posts = await getAllPostsData();
+  return {
+    props: { posts },
+  };
+}
