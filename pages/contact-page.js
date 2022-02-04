@@ -1,29 +1,35 @@
-import Image from 'next/image';
-import { Layout } from '../components/layout'
+import Image from "next/image";
+import { Layout } from "../components/Layout";
 
 const Contact = () => {
   return (
     <Layout title="contact">
-      <div className='bg-white text-center shadow-xl p-8 w-80 rounded'>
-        <div className='mt-4'>
-          <p className='font-bold'>Contact Info</p>
+      <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
+        <div className="mt-4">
+          <p className="font-bold">Contact Info</p>
         </div>
 
-        <div className='flex justify-center mt-4'>
-          <Image className='rounded-full' src='/avatar.jpg' width={60} height={60} alt='avatar' />
+        <div className="flex justify-center mt-4">
+          <Image
+            className="rounded-full"
+            src="/avatar.jpg"
+            width={60}
+            height={60}
+            alt="avatar"
+          />
         </div>
 
-        <div className='mt-4'>
-          <p className='font-bold'>Address</p>
-          <p className='text-xs mt-2 text-gray-600'>city</p>
-          <p className='font-bold mt-3'>E-mail</p>
-          <p className='text-xs mt-2'>abc@example.com</p>
-          <p className='font-bold mt-3'>Phone</p>
-          <p className='text-xs mt-2 text-gray-600'>000-1111-2222</p>
+        <div className="mt-4">
+          <p className="font-bold">Address</p>
+          <p className="text-xs mt-2 text-gray-600">city</p>
+          <p className="font-bold mt-3">E-mail</p>
+          <p className="text-xs mt-2">abc@example.com</p>
+          <p className="font-bold mt-3">Phone</p>
+          <p className="text-xs mt-2 text-gray-600">000-1111-2222</p>
         </div>
 
-        <div className='mt-6 flex justify-around'>
-                    <div>
+        <div className="mt-6 flex justify-around">
+          <div>
             <a
               href="https://nerdcave.com/tailwind-cheat-sheet"
               target="_blank"
