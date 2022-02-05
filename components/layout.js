@@ -2,8 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Layout = (props) => {
-  const { children, title = "HP by Next.js" } = props;
+export default function Layout({ children, title = "no title" }) {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
       <Head>
@@ -35,18 +34,18 @@ export const Layout = (props) => {
       <main className="flex flex-1 justify-center items-center flex-col w-screen">
         {children}
       </main>
-            <footer className="w-full h-12 flex justify-center items-center border-t">
+      <footer className="w-full h-12 flex justify-center items-center border-t">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className="h-4 ml-2">
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
